@@ -1,0 +1,15 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}MOC Sign Up{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="col-md-8">
+        <h1>MOC Project Request Form</h1>
+        {{ wtf.quick_form(form, form_type="horizontal") }}
+    </div>
+</div>
+
+{% endblock %}
