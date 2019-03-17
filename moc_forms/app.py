@@ -14,11 +14,10 @@ app = flask.Flask(__name__)
 
 app.config.update({
     'SECRET_KEY': 'SomethingNotEntirelySecret',
-    'TESTING': True,
-    'DEBUG': True,
     'OIDC_CLIENT_SECRETS': 'secrets/client_secrets.json',
     'OIDC_ID_TOKEN_COOKIE_SECURE': False,
     'OIDC_REQUIRE_VERIFIED_EMAIL': False,
+    'OVERWRITE_REDIRECT_URI': 'https://service-onboarding.k-apps.osh.massopen.cloud/oidc_callback'
 })
 
 oidc = flask_oidc.OpenIDConnect(app)
@@ -93,4 +92,4 @@ def signup():
 
 
 if __name__ == '__main__':
-    app.run(port=5001)
+    app.run(host='0.0.0.0', port=8080)

@@ -12,6 +12,7 @@
 # License for the specific language governing permissions and limitations
 # under the License.
 
+
 class SignUpRequest(object):
     def __init__(self, id_token, name, email, organization, organization_role,
                  organization_role_other, project_name, project_description,

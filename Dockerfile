@@ -18,7 +18,8 @@ COPY . /src/
 WORKDIR /src
 
 RUN pip install -r requirements.txt
+RUN pip install .
 
-EXPOSE 80
+EXPOSE 8080
 
 CMD ["python", "-m", "moc_forms.app"]

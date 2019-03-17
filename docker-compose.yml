@@ -8,4 +8,4 @@ services:
       dockerfile: Dockerfile
     image: moc-forms
     ports:
-      - "5001:80"  # host:container
+      - "5001:8080"  # host:container
