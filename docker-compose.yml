@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  moc-forms:
+    container_name: moc-forms
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: moc-forms
+    ports:
+      - "5001:80"  # host:container
